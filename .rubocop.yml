@@ -6,6 +6,9 @@ Lint/HandleExceptions:
     - 'bin/rails'
     - 'bin/rake'
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 ClassLength:
   Max: 150
 
