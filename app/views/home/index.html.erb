@@ -1,10 +1,12 @@
+<!-- <script src="intl_to_cn.js"></script> -->
+
 <h1>Example: Modify country data</h1>
 
 <input id="phone" type="tel">
 
 <script type="text/javascript">
 $(document).ready(function() {
-  $.getJSON('/ru.json', function(data) {
+  $.getJSON('/cn.json', function(data) {
     var countryData = $.fn.intlTelInput.getCountryData();
     $.each(countryData, function(i, country) {
       country.name = data[i][0];
