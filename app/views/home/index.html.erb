@@ -3,5 +3,13 @@
 <input id="phone" type="tel">
 
 <script type="text/javascript">
-$("#phone").intlTelInput();
+$(document).ready(function() {
+  $.getJSON('/ru.json', function(data) {
+    var countryData = $.fn.intlTelInput.getCountryData();
+    $.each(countryData, function(i, country) {
+      country.name = data[i][0];
+    });
+    $("#phone").intlTelInput();
+  });
+});
 </script>
