@@ -15,7 +15,7 @@ gem 'sass-rails', '~> 5.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-gem 'intl-tel-input', git: 'https://github.com/eduvo/intl-tel-input-rails', branch: :master
+gem 'intl-tel-input'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
