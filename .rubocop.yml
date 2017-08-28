@@ -1,0 +1,19 @@
+AllCops:
+  TargetRubyVersion: 2.4
+
+Lint/HandleExceptions:
+  Exclude:
+    - 'bin/rails'
+    - 'bin/rake'
+
+ClassLength:
+  Max: 150
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/LineLength:
+  Max: 113
+
+Style/Documentation:
+  Enabled: false
