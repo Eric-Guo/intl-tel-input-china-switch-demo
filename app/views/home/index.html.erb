@@ -6,7 +6,7 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-  $.getJSON('/cn.json', function(data) {
+  $.getJSON('/zh-tw.json', function(data) {
     var countryData = $.fn.intlTelInput.getCountryData();
     $.each(countryData, function(i, country) {
       var local_name = country.name.replace(/.+\((.+)\)/,"$1");
