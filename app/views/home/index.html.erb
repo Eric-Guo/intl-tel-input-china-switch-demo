@@ -9,7 +9,8 @@ $(document).ready(function() {
   $.getJSON('/cn.json', function(data) {
     var countryData = $.fn.intlTelInput.getCountryData();
     $.each(countryData, function(i, country) {
-      country.name = data[i][0];
+      var local_name = country.name.replace(/.+\((.+)\)/,"$1");
+      country.name = data[i][0] + '(' + local_name + ')';
     });
     $("#phone").intlTelInput();
   });
