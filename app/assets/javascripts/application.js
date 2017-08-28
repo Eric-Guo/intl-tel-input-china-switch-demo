@@ -12,4 +12,6 @@
 //
 //= require jquery2
 //= require jquery_ujs
+//= require intl-tel-input
+//= require intl-tel-input.utils
 //= require_tree .

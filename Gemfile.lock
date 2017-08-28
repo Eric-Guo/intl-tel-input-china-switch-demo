@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/eduvo/intl-tel-input-rails
-  revision: ab141c6fd17f06be52479b1799530dc197d92d4c
+  revision: 0ae07cec0efe8942b60d7c960e2190804b18db46
   branch: master
   specs:
     intl-tel-input (12.0.1)
