@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![master](https://circleci.com/gh/Eric-Guo/intl-tel-input-china-switch-demo/tree/master.png?style=shield&circle-token=6035469db6dd1c3b2a3b591b8f6a2a2d1951ed09)](https://circleci.com/gh/Eric-Guo/intl-tel-input-china-switch-demo/tree/master)
