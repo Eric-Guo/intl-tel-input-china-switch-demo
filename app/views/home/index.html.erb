@@ -9,8 +9,12 @@ $(document).ready(function() {
   $.getJSON('/zh-tw.json', function(data) {
     var countryData = $.fn.intlTelInput.getCountryData();
     $.each(countryData, function(i, country) {
-      var local_name = country.name.replace(/.+\((.+)\)/,"$1");
-      country.name = data[i][0] + '(' + local_name + ')';
+      var idx_left = country.name.lastIndexOf('(');
+      var local_name = country.name + ')';
+      if (idx_left > 0) {
+        local_name = country.name.substr(idx_left + 1);
+      }
+      country.name = data[i][0] + '(' + local_name;
     });
     $("#phone").intlTelInput();
   });
