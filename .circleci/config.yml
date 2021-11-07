@@ -7,7 +7,13 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-       - image: circleci/ruby:2.4.1-node-browsers
+      - image: circleci/ruby:3.0.2-node-browsers
+        environment: # environment variables for primary container
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          RAILS_ENV: test
+          NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -19,22 +25,25 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
+      # Which version of bundler? should keep same as Gemfile.lock
+      - run:
+          name: install bundler v2.2.30
+          command: gem install bundler:2.2.30 && bundle -v
+
+      # Restore bundle cache
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - intl-tel-input-bundle-v2-{{ checksum "Gemfile.lock" }}
 
       - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
+          name: Bundle Install
+          command: bundle check || bundle install
 
+      # Store bundle cache
       - save_cache:
+          key: intl-tel-input-bundle-v2-{{ checksum "Gemfile.lock" }}
           paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - vendor/bundle
 
       # Database setup
       - run: bundle exec rake db:create
