@@ -6,26 +6,24 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 6.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.13'
+gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.12'
+gem 'puma'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 gem 'intl-tel-input'
 
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.8'
+gem 'jbuilder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -36,7 +34,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %I[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.18'
+  gem 'capybara'
   gem 'selenium-webdriver'
 end
 
